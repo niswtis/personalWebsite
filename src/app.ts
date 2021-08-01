@@ -1,25 +1,30 @@
+import './components/pw-nav-bar'
 class App extends HTMLElement {
   static get is () {
-    return 'app'
+    return 'pw-app'
   }
 
   constructor () {
-    super ()
+    super()
     
     const shadow = this.attachShadow({mode: 'open'});
-    
   }
 
   connectedCallback () {
-    console.log("HORRAY")
     this.render()
   }
 
   render () {
     this.shadowRoot.innerHTML = `
-      <h1>My name is Aris</h1>
+      <style>
+        :host{
+          flex: 1 1 auto;
+        }
+      </style>
+      <pw-nav-bar></pw-nav-bar>
     `
   }
 }
 
 customElements.define(App.is, App)
+export default App.is

@@ -1,0 +1,13 @@
+[data-theme = "dark"]{
+    --pw-background-dark: #00081A;
+    --pw-background-light: #12192A;
+    --pw-text-normal: #F4F8FF;
+    --pw-text-highlighted: #165EFF;
+}
+
+[data-theme = "light"]{
+    --pw-background-dark: #CFDDF3;
+    --pw-background-light: #F4F8FF;
+    --pw-text-normal: #071330;
+    --pw-text-highlighted: #004EFF;
+}
