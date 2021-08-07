@@ -1,3 +1,5 @@
+import './pw-icon'
+
 class navBar extends HTMLElement {
   static get is () {
     return 'pw-nav-bar'
@@ -38,51 +40,48 @@ class navBar extends HTMLElement {
         color: var(--pw-text-normal);
         font-family: 'Roboto', sans-serif;
         transition: color 0.5s ease;
+        font-size: 19px;
       }
 
       div a:hover {
         color: var(--pw-text-highlighted);
       }
 
-      div img {
-        color: var(--pw-text-normal);
-        width: 25px;
-        height: 25px;
-      }
-
-      path {
-        color: var(--pw-text-normal);
-      }
-
-      path:hover {
-        color: var(--pw-text-highlighted);
+      div pw-icon {
+        width: 20px;
+        height: 20px;
       }
 
     </style>
 
     <div>
-      <img src="../assets/icons/iconmonstr-weather-1.svg"></img>
+      <pw-icon name = "sun" ></pw-icon>
       <a>Home</a>
       <a>About</a>
       <a>Background</a>
       <a>Skills</a>
       <a>Contact</a>
-     </div> 
-    `
+    </div> 
+  `
 
-    const colorModeBtn = this.shadowRoot.querySelector('img')
-    colorModeBtn.addEventListener('click', this.changeColorMode)
+     const colorModeBtn = this.shadowRoot.querySelector('pw-icon')
+     colorModeBtn.addEventListener('click', this.changeColorMode)
   }
 
   changeColorMode (): void {
     const body = document.body
     const dataTheme = body.getAttribute('data-theme')
-    if (dataTheme === 'dark') body.setAttribute('data-theme','light')
-    else body.setAttribute('data-theme','dark')
 
-    //change icon svg
-    //color of icon should be taken care of from the css vars
-    //everything else should be good to go
+    if (dataTheme === 'dark') {
+      body.setAttribute('data-theme','light')
+      this.setAttribute('name', 'moon')
+    }
+    else {
+      body.setAttribute('data-theme','dark')
+      this.setAttribute('name', 'sun')
+    }
+
+    console.log(this)
   }
 }
 

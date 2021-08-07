@@ -1,4 +1,7 @@
 import './components/pw-nav-bar'
+import './views/home-view'
+import './views/about-view'
+
 class App extends HTMLElement {
   static get is () {
     return 'pw-app'
@@ -19,9 +22,12 @@ class App extends HTMLElement {
       <style>
         :host{
           flex: 1 1 auto;
+          max-width: 1200px;
         }
       </style>
       <pw-nav-bar></pw-nav-bar>
+      <pw-view-home></pw-view-home>
+      <!--<pw-view-about></pw-view-about>-->
     `
   }
 }
