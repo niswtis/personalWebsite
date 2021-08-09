@@ -1,6 +1,6 @@
-class ViewHome extends HTMLElement {
+class ViewBackground extends HTMLElement {
   static get is () {
-    return 'pw-view-home'
+    return 'pw-view-background'
   }
 
   constructor () {
@@ -95,5 +95,5 @@ class ViewHome extends HTMLElement {
   }
 }
 
-customElements.define(ViewHome.is, ViewHome)
-export default ViewHome.is
+customElements.define(ViewBackground.is, ViewBackground)
+export default ViewBackground.is

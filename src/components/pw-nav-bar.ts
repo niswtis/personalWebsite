@@ -21,8 +21,7 @@ class navBar extends HTMLElement {
       :host {
         display: flex;
         height: 50px;
-        background-color: var(--pw-background-dark);
-        transition: background-color 0.5s ease;
+        background-color: transparent;
       }
 
       div {

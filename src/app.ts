@@ -1,6 +1,7 @@
 import './components/pw-nav-bar'
 import './views/home-view'
 import './views/about-view'
+import './views/background-view'
 
 class App extends HTMLElement {
   static get is () {
@@ -27,7 +28,8 @@ class App extends HTMLElement {
       </style>
       <pw-nav-bar></pw-nav-bar>
       <pw-view-home></pw-view-home>
-      <!--<pw-view-about></pw-view-about>-->
+      <pw-view-about></pw-view-about>
+      <pw-view-background></pw-view-background>
     `
   }
 }

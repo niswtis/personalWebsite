@@ -41,7 +41,7 @@ class icon extends HTMLElement {
         fill: var(--pw-text-normal);
         width: 100%;
         height: var(--width);
-        transition: fill 0.5s ease;
+        transition: fill 1s ease;
       }
 
       :host svg:hover {

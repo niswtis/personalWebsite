@@ -22,6 +22,9 @@ class ViewAbout extends HTMLElement {
             margin-top: 4vw;
             align-items: center;
             flex-direction: column;
+            background-color: var(--pw-background-light);
+            transition: background-color 1s ease;
+            transform: skewY(3deg);
         }
 
         :host .container {
@@ -30,65 +33,36 @@ class ViewAbout extends HTMLElement {
             width: 85%;
             min-width: 790px;
             justify-content: center;
+            align-items: center;
+            transform: skewY(-3deg);
+            margin-top: 5%;
+            margin-bottom: 5%;
         }
 
         :host img{
             width: 350px;
-            height: var(--width);
+            height: 350px;
             border-radius: 50%; 
-            border: 1.5px solid var(--pw-text-normal);
+            border: 2px solid var(--pw-text-normal);
         }
 
-        :host .headers{
-            display: flex;
-            width: 41%;
-            flex-direction: row;
-            justify-content: start;
-        }
-
-
-        :host .headerContainer{
-            display: flex;
-            flex: 1 1 auto;
-            flex-direction: column;
-            justify-content: center;
-            margin-left: 16%;
-        }
-
-        :host .headerContainer #header1{
+        :host .aboutMeText {
             color: var(--pw-text-normal);
+            transition: color 1s ease;
             font-family: 'Roboto', sans-serif;
-            transition: color 0.5s ease;
-            font-size: 40px;
-        }
-
-        :host .headerContainer #header2{
-            color: var(--pw-text-normal);
-            font-family: 'Roboto', sans-serif;
-            transition: color 0.5s ease;
-            font-size: 30px;
-        }
-
-        hr{
-            background: var(--pw-text-normal);
-            transition: background 0.5s ease;
-            border: 0;
-            width: 294px;
-            height: 4px;
-            border-radius: 4px;
-            margin-left: 0;
+            font-size: 20px;
+            margin-right: 10%;
+            width: 50%;
         }
     </style> 
 
     <div class="container">
-        <img src="../assets/pictures/profile1.jpg"></img>
-        <div class="headers">
-            <div class="headerContainer">
-                <label id="header1"> Hi, I'm Aris </label>
-                <hr>
-                <label id="header2"> Junior Web Developer </label>
-            </div>
+        <div class="aboutMeText">
+            My name is Aristides Nisotakis but my friends call me Aris. I am from Heraklion, Crete, Greece. Having lived and studied in Heraklion I have learned to love my city and all it’s beauties while staying fascinated when exploring new places. In my free time I love to create stuff digitally such as taking photos and editing them, or developing web applications such as this one. Motivated by progressiveness and fueled by good music. 
+            <br><br>
+            My journey in Web Development started from University when I took some courses in Web Programming and UI/UX design. Throughout those courses I have developed  front ends for an e-commerce and a video conference website (UI/UX) as well as a fully functional while quite basic social network website. My interest though was peaked when I landed a position for a company based in the Netherlands as a part of my Erasmus+ Internship. Throughout that experience I learned a lot of the fundamentals of the Web Development Stack in conjunction with working as a part of the team and by the end of it the journey for carreer in Web Development has begun.        
         </div>  
+        <img src="../assets/pictures/profile1.jpg"></img>
     </div>
       
     `
