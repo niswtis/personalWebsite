@@ -1,3 +1,4 @@
+import '../components/pw-background-component'
 class ViewBackground extends HTMLElement {
   static get is () {
     return 'pw-view-background'
@@ -26,69 +27,67 @@ class ViewBackground extends HTMLElement {
 
         :host .container {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             width: 85%;
             min-width: 790px;
             justify-content: center;
+            align-items: center;
         }
 
-        :host img{
-            width: 350px;
-            height: var(--width);
-            border-radius: 50%; 
-            border: 2px solid var(--pw-text-normal);
+        :host .vl {
+            border-left: 4px solid var(--pw-text-normal);
+            height: 50px;
+            margin: 20px 0px 20px 0px;
         }
 
-        :host .headers{
+        :host .background-circle-container {
             display: flex;
-            width: 41%;
             flex-direction: row;
-            justify-content: start;
+            align-items: center;
+            width: 100%;
         }
 
-
-        :host .headerContainer{
-            display: flex;
-            flex: 1 1 auto;
-            flex-direction: column;
-            justify-content: center;
-            margin-left: 16%;
+        :host .background-circle-container.left {
+            justify-content: flex-end;
         }
 
-        :host .headerContainer #header1{
+        :host .background-circle-container.right {
+            justify-content: flex-start;
+        }
+
+        :host .background-circle-container label {
             color: var(--pw-text-normal);
-            font-family: 'Roboto', sans-serif;
             transition: color 1s ease;
-            font-size: 40px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 23px;
         }
 
-        :host .headerContainer #header2{
-            color: var(--pw-text-normal);
-            font-family: 'Roboto', sans-serif;
-            transition: color 1s ease;
-            font-size: 30px;
+        :host .background-circle-container.right label {
+            margin-right: 15%;
         }
 
-        hr{
-            background: var(--pw-text-normal);
-            transition: background 1s ease;
-            border: 0;
-            width: 294px;
-            height: 4px;
-            border-radius: 4px;
-            margin-left: 0;
+        :host .background-circle-container.left label {
+            margin-left: 15%;
         }
+
+
     </style> 
 
     <div class="container">
-        <img src="../assets/pictures/profile1.jpg"></img>
-        <div class="headers">
-            <div class="headerContainer">
-                <label id="header1"> Hi, I'm Aris </label>
-                <hr>
-                <label id="header2"> Junior Web Developer </label>
-            </div>
-        </div>  
+      <div class="background-circle-container left">
+        <pw-background-component src="../assets/pictures/pluxbox_new.png" style = '--background-color:#03A7F1;'></pw-background-component>
+        <label> Web Developer at Pluxbox </label>
+    </div>
+      <div class="vl"></div>
+      <div class="background-circle-container right">
+        <label>Web Developer at Pluxbox</label>
+        <pw-background-component src="../assets/pictures/pluxbox_old.png" style = '--background-color:#DBDFE6;'></pw-background-component>
+      </div>
+      <div class="vl"></div>
+      <div class="background-circle-container left">
+        <pw-background-component src="../assets/pictures/UoC.png" style = '--background-color:#DBDFE6;'></pw-background-component>
+        <label>Web Developer at Pluxbox</label>
+      </div>
     </div>
       
     `
