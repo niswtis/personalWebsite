@@ -33,7 +33,6 @@ class backgroundComponent extends HTMLElement {
         background-color: var(--background-color)
       }
       </style>
-      <label></label>
       <img src="${this.getAttribute('src')}"></img>
     `
     console.log(this.getAttribute('src'))
