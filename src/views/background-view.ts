@@ -44,7 +44,7 @@ class ViewBackground extends HTMLElement {
         }
 
         :host .background-circle-container label {
-            color: var(--pw-text-normal);
+            color: var(--pw-text-light);
             transition: color 1s ease;
             font-family: 'Roboto', sans-serif;
             font-size: 23px;

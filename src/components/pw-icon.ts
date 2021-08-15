@@ -38,7 +38,7 @@ class icon extends HTMLElement {
       }
 
       :host svg{
-        fill: var(--pw-text-normal);
+        fill: var(--pw-text-light);
         width: 100%;
         height: var(--width);
         transition: fill 1s ease;

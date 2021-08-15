@@ -36,7 +36,7 @@ class ViewHome extends HTMLElement {
             width: 350px;
             height: var(--width);
             border-radius: 50%; 
-            border: 2px solid var(--pw-text-normal);
+            border: 2px solid var(--pw-text-light);
         }
 
         :host .headers{
@@ -56,21 +56,21 @@ class ViewHome extends HTMLElement {
         }
 
         :host .headerContainer #header1{
-            color: var(--pw-text-normal);
+            color: var(--pw-text-light);
             font-family: 'Roboto', sans-serif;
             transition: color 1s ease;
             font-size: 40px;
         }
 
         :host .headerContainer #header2{
-            color: var(--pw-text-normal);
+            color: var(--pw-text-light);
             font-family: 'Roboto', sans-serif;
             transition: color 1s ease;
             font-size: 30px;
         }
 
         hr{
-            background: var(--pw-text-normal);
+            background: var(--pw-text-light);
             transition: background 1s ease;
             border: 0;
             width: 294px;

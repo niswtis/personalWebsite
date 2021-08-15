@@ -3,7 +3,7 @@ import './views/home-view'
 import './views/about-view'
 import './views/background-view'
 import './views/skills-view'
-
+import './views/contact-view'
 
 class App extends HTMLElement {
   static get is () {
@@ -33,6 +33,7 @@ class App extends HTMLElement {
       <pw-view-about></pw-view-about>
       <pw-view-background></pw-view-background>
       <pw-view-skills></pw-view-skills>
+      <pw-view-contact></pw-view-contact>
     `
   }
 }

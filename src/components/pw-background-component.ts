@@ -29,7 +29,7 @@ class backgroundComponent extends HTMLElement {
         width: 250px;
         height: 250px;
         border-radius: 50%; 
-        border: 2px solid var(--pw-text-normal);
+        border: 2px solid var(--pw-text-light);
         background-color: var(--background-color)
       }
       </style>

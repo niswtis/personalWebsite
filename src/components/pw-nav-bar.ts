@@ -36,7 +36,7 @@ class navBar extends HTMLElement {
         padding: 10px;    
         text-align: center;
         line-height: 30px;
-        color: var(--pw-text-normal);
+        color: var(--pw-text-light);
         font-family: 'Roboto', sans-serif;
         transition: color 0.5s ease;
         font-size: 19px;

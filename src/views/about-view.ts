@@ -43,11 +43,11 @@ class ViewAbout extends HTMLElement {
             width: 350px;
             height: 350px;
             border-radius: 50%; 
-            border: 2px solid var(--pw-text-normal);
+            border: 2px solid var(--pw-text-light);
         }
 
         :host .aboutMeText {
-            color: var(--pw-text-normal);
+            color: var(--pw-text-light);
             transition: color 1s ease;
             font-family: 'Roboto', sans-serif;
             font-size: 20px;
