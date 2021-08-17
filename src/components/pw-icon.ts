@@ -1,29 +1,23 @@
 import { iconList } from '../assets/icons/icons'
 class icon extends HTMLElement {
-  static get is () {
+  static get is (): string {
     return 'pw-icon'
   }
 
   constructor () {
     super()
-    
-    const shadow = this.attachShadow({mode: 'open'})
-    
+    this.attachShadow({ mode: 'open' })
   }
 
-  static get observedAttributes() {
-    return ['name'];
+  static get observedAttributes(): string[] {
+    return ['name']
   }
 
-  attributeChangedCallback (attrName: string, oldValue:string, newValue:string) {
+  connectedCallback (): void {
     this.render()
   }
 
-  connectedCallback () {
-    this.render()
-  }
-
-  render () {
+  render (): void {
     this.shadowRoot.innerHTML = `
     <style>
       :host {
@@ -41,7 +35,7 @@ class icon extends HTMLElement {
         fill: var(--pw-text-light);
         width: 100%;
         height: var(--width);
-        transition: fill 1s ease;
+        transition: fill 0.5s ease;
       }
 
       :host svg:hover {
@@ -53,7 +47,6 @@ class icon extends HTMLElement {
     `
   }
 }
-
 
 customElements.define(icon.is, icon)
 export default icon.is

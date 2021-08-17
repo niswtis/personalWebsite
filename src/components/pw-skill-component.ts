@@ -37,7 +37,7 @@ class skillComponent extends HTMLElement {
         color: var(--pw-text-light);
         transition: color 1s ease;
         font-family: 'Roboto', sans-serif;
-        font-size: 24px;
+        font-size: 20px;
         margin-top: 5%;
       }
 

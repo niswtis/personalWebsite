@@ -4,23 +4,23 @@ import './views/about-view'
 import './views/background-view'
 import './views/skills-view'
 import './views/contact-view'
+import './views/footer-view'
 
 class App extends HTMLElement {
-  static get is () {
+  static get is (): string {
     return 'pw-app'
   }
 
   constructor () {
     super()
-    
-    const shadow = this.attachShadow({mode: 'open'});
+    this.attachShadow({ mode: 'open' })
   }
 
-  connectedCallback () {
+  connectedCallback (): void {
     this.render()
   }
 
-  render () {
+  render (): void {
     this.shadowRoot.innerHTML = `
       <style>
         :host{
@@ -28,13 +28,20 @@ class App extends HTMLElement {
           max-width: 1200px;
         }
       </style>
+
       <pw-nav-bar></pw-nav-bar>
-      <pw-view-home></pw-view-home>
-      <pw-view-about></pw-view-about>
-      <pw-view-background></pw-view-background>
-      <pw-view-skills></pw-view-skills>
-      <pw-view-contact></pw-view-contact>
+      <pw-view-home id="home"></pw-view-home>
+      <pw-view-about id="about"></pw-view-about>
+      <pw-view-background id="background"></pw-view-background>
+      <pw-view-skills id="skills"></pw-view-skills>
+      <pw-view-contact id="contact"></pw-view-contact>
+      <pw-view-footer></pw-view-footer>
     `
+
+    const navBar = this.shadowRoot.querySelector('pw-nav-bar')
+    navBar.addEventListener('scroll', (evt: CustomEvent) => {
+      this.shadowRoot.querySelector(`#${evt.detail.id}`).scrollIntoView({ behavior: 'smooth' })
+    })
   }
 }
 

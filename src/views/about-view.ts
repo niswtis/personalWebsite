@@ -44,6 +44,7 @@ class ViewAbout extends HTMLElement {
             height: 350px;
             border-radius: 50%; 
             border: 2px solid var(--pw-text-light);
+            transition: border 1s ease;
         }
 
         :host .aboutMeText {

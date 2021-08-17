@@ -30,7 +30,8 @@ class backgroundComponent extends HTMLElement {
         height: 250px;
         border-radius: 50%; 
         border: 2px solid var(--pw-text-light);
-        background-color: var(--background-color)
+        background-color: var(--background-color);
+        transition: border 1s ease, background-color 1s ease;
       }
       </style>
       <img src="${this.getAttribute('src')}"></img>

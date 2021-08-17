@@ -30,6 +30,7 @@ class ViewHome extends HTMLElement {
             width: 85%;
             min-width: 790px;
             justify-content: center;
+            margin-top: 1%;
         }
 
         :host img{

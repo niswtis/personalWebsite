@@ -18,10 +18,15 @@ class navBar extends HTMLElement {
   render () {
     this.shadowRoot.innerHTML = `
     <style>
-      :host {
+      :host{
         display: flex;
         height: 50px;
-        background-color: transparent;
+        background-color: var(--pw-background-dark);
+        transition: background-color 1s ease;
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+        max-width: 1200px;
       }
 
       div {
@@ -40,6 +45,7 @@ class navBar extends HTMLElement {
         font-family: 'Roboto', sans-serif;
         transition: color 0.5s ease;
         font-size: 19px;
+        text-decoration: none;
       }
 
       div a:hover {
@@ -55,16 +61,24 @@ class navBar extends HTMLElement {
 
     <div>
       <pw-icon name = "sun" ></pw-icon>
-      <a>Home</a>
-      <a>About</a>
-      <a>Background</a>
-      <a>Skills</a>
-      <a>Contact</a>
+      <a href="#home" name='home'>Home</a>
+      <a href="#about" name='about'>About</a>
+      <a href="#background" name='background'>Background</a>
+      <a href="#skills" name='skills'>Skills</a>
+      <a href="#contact" name='contact'>Contact</a>
     </div> 
   `
 
-     const colorModeBtn = this.shadowRoot.querySelector('pw-icon')
-     colorModeBtn.addEventListener('click', this.changeColorMode)
+    const colorModeBtn = this.shadowRoot.querySelector('pw-icon')
+    colorModeBtn.addEventListener('click', this.changeColorMode)
+
+    const hyperlinks = this.shadowRoot.querySelectorAll('a')
+    for (const hyperlink of hyperlinks) {
+      hyperlink.addEventListener('click', evt => {
+        const hyperlinkName = (evt.target as HTMLElement).getAttribute('name')
+        this.dispatchEvent(new CustomEvent('scroll', { detail: { id: hyperlinkName } }))
+      })
+    }
   }
 
   changeColorMode (): void {
