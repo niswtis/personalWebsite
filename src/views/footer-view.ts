@@ -44,7 +44,7 @@ class ViewFooter extends HTMLElement {
             color: var(--pw-text-light);
             transition: color 1s ease;
             font-family: 'Roboto', sans-serif;
-            font-size: 24px;
+            font-size: 21px;
             margin-top: 3%;
             margin-bottom: 3%;
           }
@@ -69,13 +69,23 @@ class ViewFooter extends HTMLElement {
       <div class="container">
         <label>Copyright © 2021 Aristeidis Nisotakis</label>
         <div class="vl"></div>
-        <pw-icon name = "git2"></pw-icon>
-        <pw-icon name = "linkedin"></pw-icon>
-        <pw-icon name = "gmail"></pw-icon>
-        <pw-icon name = "cv"></pw-icon>
+        <pw-icon name = "git2" onclick="window.open('https://github.com/niswtis','_newtab');"></pw-icon>
+        <pw-icon name = "linkedin" onclick="window.open('https://www.linkedin.com/in/aristides-nisotakis-8121901ab','_newtab');"></pw-icon>
+        <pw-icon name = "gmail" onclick="window.open('mailto:niswtis@gmail.com','_newtab');"></pw-icon>
+        <pw-icon name = "cv" class='cvBtn'></pw-icon>
       </div>
         
       `
+      const cvBtn = this.shadowRoot.querySelector('.cvBtn')
+      cvBtn.addEventListener('click',this.downloadCV)
+    }
+
+    downloadCV(){
+      var link=document.createElement('a');
+      const filePath = './assets/files/cv.pdf'
+      link.href = filePath;
+      link.download = filePath.substr(filePath.lastIndexOf('/') + 1);
+      link.click();
     }
   }
   
