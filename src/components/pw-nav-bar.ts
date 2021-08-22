@@ -20,7 +20,7 @@ class navBar extends HTMLElement {
     <style>
       :host{
         display: flex;
-        height: 50px;
+        height: 55px;
         background-color: var(--pw-background-dark);
         transition: background-color 1s ease;
         position: fixed;
@@ -44,7 +44,7 @@ class navBar extends HTMLElement {
         color: var(--pw-text-light);
         font-family: 'Roboto', sans-serif;
         transition: color 0.5s ease;
-        font-size: 19px;
+        font-size: 22px;
         text-decoration: none;
       }
 

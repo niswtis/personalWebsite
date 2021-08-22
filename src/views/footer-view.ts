@@ -82,7 +82,7 @@ class ViewFooter extends HTMLElement {
 
     downloadCV(){
       var link=document.createElement('a');
-      const filePath = './assets/files/cv.pdf'
+      const filePath = './src/assets/files/cv.pdf'
       link.href = filePath;
       link.download = filePath.substr(filePath.lastIndexOf('/') + 1);
       link.click();
