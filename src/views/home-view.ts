@@ -82,7 +82,7 @@ class ViewHome extends HTMLElement {
     </style> 
 
     <div class="container">
-        <img src="../assets/pictures/profile1.jpg"></img>
+        <img src="./src/assets/pictures/profile1.jpg"></img>
         <div class="headers">
             <div class="headerContainer">
                 <label id="header1"> Hi, I'm Aris </label>

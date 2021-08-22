@@ -54,15 +54,15 @@ class ViewBackground extends HTMLElement {
 
     <div class="container">
       <div class="background-circle-container">
-        <pw-background-component src="../assets/pictures/pluxbox_new.png" style = '--background-color:#03A7F1;'></pw-background-component>
+        <pw-background-component src="./src/assets/pictures/pluxbox_new.png" style = '--background-color:#03A7F1;'></pw-background-component>
         <label> Web Developer at Pluxbox </label>
     </div>
       <div class="background-circle-container">
-        <pw-background-component src="../assets/pictures/pluxbox_old.png" style = '--background-color:#DBDFE6;'></pw-background-component>
+        <pw-background-component src="./src/assets/pictures/pluxbox_old.png" style = '--background-color:#DBDFE6;'></pw-background-component>
         <label>Web Developer at Pluxbox</label>
       </div>
       <div class="background-circle-container">
-        <pw-background-component src="../assets/pictures/UoC.png" style = '--background-color:#DBDFE6;'></pw-background-component>
+        <pw-background-component src="./src/assets/pictures/UoC.png" style = '--background-color:#DBDFE6;'></pw-background-component>
         <label>Web Developer at Pluxbox</label>
       </div>
     </div>

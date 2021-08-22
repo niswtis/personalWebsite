@@ -63,7 +63,7 @@ class ViewAbout extends HTMLElement {
             <br><br>
             My journey in Web Development started from University when I took some courses in Web Programming and UI/UX design. Throughout those courses I have developed  front ends for an e-commerce and a video conference website (UI/UX) as well as a fully functional while quite basic social network website. My interest though was peaked when I landed a position for a company based in the Netherlands as a part of my Erasmus+ Internship. Throughout that experience I learned a lot of the fundamentals of the Web Development Stack in conjunction with working as a part of the team and by the end of it the journey for carreer in Web Development has begun.        
         </div>  
-        <img src="../assets/pictures/profile1.jpg"></img>
+        <img src="./src/assets/pictures/profile1.jpg"></img>
     </div>
       
     `
