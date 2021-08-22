@@ -30,7 +30,7 @@ class skillComponent extends HTMLElement {
         align-items: center;
         display: flex;
         flex-direction: column;
-        margin-top: 15%;
+        margin-top: 25%;
       }
 
       :host label {

@@ -20,7 +20,7 @@ class ViewBackground extends HTMLElement {
         :host {
             display: flex;
             flex: 1 1 auto;
-            margin-top: 4vw;
+            margin-top: 5%;
             align-items: center;
             flex-direction: column;
         }

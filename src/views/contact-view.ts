@@ -23,7 +23,7 @@ class ViewContact extends HTMLElement {
         :host {
           display: flex;
           flex: 1 1 auto;
-          margin-top: 4vw;
+          margin-top: 8%;
           align-items: center;
           flex-direction: column;
           background-color: var(--pw-background-dark);

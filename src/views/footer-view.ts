@@ -34,7 +34,7 @@ class ViewFooter extends HTMLElement {
               min-width: 790px;
               justify-content: center;
               align-items: center;
-              margin-top: 5%;
+              margin-top: 3%;
               width: 100%;
               border-top: solid 4px var(--pw-separator);
               transition: border-top 1s ease;

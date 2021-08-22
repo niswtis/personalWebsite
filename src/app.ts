@@ -40,7 +40,7 @@ class App extends HTMLElement {
 
     const navBar = this.shadowRoot.querySelector('pw-nav-bar')
     navBar.addEventListener('scroll', (evt: CustomEvent) => {
-      this.shadowRoot.querySelector(`#${evt.detail.id}`).scrollIntoView({ behavior: 'smooth' })
+      this.shadowRoot.querySelector(`#${evt.detail.id}`).scrollIntoView({ behavior: 'smooth', block:'center' })
     })
   }
 }

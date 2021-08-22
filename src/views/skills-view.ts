@@ -20,7 +20,7 @@ class ViewSkills extends HTMLElement {
           :host {
               display: flex;
               flex: 1 1 auto;
-              margin-top: 4vw;
+              margin-top: 10%;
               align-items: center;
               flex-direction: column;
               background-color: var(--pw-background-light);
@@ -31,7 +31,7 @@ class ViewSkills extends HTMLElement {
           :host .container {
               display: grid;
               grid-template-columns: repeat(4, 1fr);
-              gap: 10px;
+              gap: 45px;
               grid-auto-rows: minmax(100px, auto);
               flex-direction: row;
               width: 85%;
@@ -40,7 +40,7 @@ class ViewSkills extends HTMLElement {
               align-items: center;
               transform: skewY(3deg);
               margin-top: 5%;
-              margin-bottom: 5%;
+              margin-bottom: 8%;
           }
       </style> 
   
