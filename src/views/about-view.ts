@@ -27,6 +27,26 @@ class ViewAbout extends HTMLElement {
             transform: skewY(3deg);
         }
 
+        :host .headerContainer{
+          flex-direction: row;
+          width: 85%;
+          min-width: 790px;
+          justify-content: center;
+          align-items: center;    
+          margin-top: 5%; 
+        }
+
+        :host .headerContainer h2 {
+          color: var(--pw-text-light);
+          transition: color 1s ease;
+          font-family: 'Roboto', sans-serif;
+          transform: skewY(-3deg);
+          margin: 0;
+          border-bottom: 2px solid var(--pw-text-light);
+          width: fit-content;
+          padding-right: 3px;
+        }
+
         :host .container {
             display: flex;
             flex-direction: row;
@@ -35,15 +55,15 @@ class ViewAbout extends HTMLElement {
             justify-content: center;
             align-items: center;
             transform: skewY(-3deg);
-            margin-top: 5%;
-            margin-bottom: 5%;
+            margin-top: 2%;
+            margin-bottom: 8%;
         }
 
         :host img{
             width: 350px;
             height: 350px;
             border-radius: 50%; 
-            border: 2px solid var(--pw-text-light);
+            box-shadow: 0px 0px 15px var(--pw-text-light);
             transition: border 1s ease;
         }
 
@@ -57,6 +77,9 @@ class ViewAbout extends HTMLElement {
         }
     </style> 
 
+    <div class="headerContainer">
+      <h2>About</h2>
+    </div>
     <div class="container">
         <div class="aboutMeText">
             My name is Aristides Nisotakis but my friends call me Aris. I am from Heraklion, Crete, Greece. Having lived and studied in Heraklion I have learned to love my city and all it’s beauties while staying fascinated when exploring new places. In my free time I love to create stuff digitally such as taking photos and editing them, or developing web applications such as this one. Motivated by progressiveness and fueled by good music. 

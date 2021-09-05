@@ -44,7 +44,7 @@ class navBar extends HTMLElement {
         color: var(--pw-text-light);
         font-family: 'Roboto', sans-serif;
         transition: color 0.5s ease;
-        font-size: 22px;
+        font-size: 21px;
         text-decoration: none;
       }
 
@@ -55,17 +55,17 @@ class navBar extends HTMLElement {
       div pw-icon {
         width: 20px;
         height: 20px;
+        padding: 10px;
       }
-
     </style>
 
     <div>
       <pw-icon name = "sun" ></pw-icon>
-      <a href="#home" name='home'>Home</a>
-      <a href="#about" name='about'>About</a>
-      <a href="#background" name='background'>Background</a>
-      <a href="#skills" name='skills'>Skills</a>
-      <a href="#contact" name='contact'>Contact</a>
+      <a href="#home" name="home" title="Home">Home</a>
+      <a href="#about" name="about" title="About">About</a>
+      <a href="#background" name="background" title="Background">Background</a>
+      <a href="#skills" name="skills" title="Skills">Skills</a>
+      <a href="#contact" name="contact" title="Contact">Contact</a>
     </div> 
   `
 

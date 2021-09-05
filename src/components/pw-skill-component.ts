@@ -56,6 +56,7 @@ class skillComponent extends HTMLElement {
     <pw-icon name = "${this.getAttribute('name')}" ></pw-icon>
     <label>${this.getAttribute('label')}<label>
     `
+    this.title = this.getAttribute('label')
   }
 }
 

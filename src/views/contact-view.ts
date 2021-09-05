@@ -30,6 +30,24 @@ class ViewContact extends HTMLElement {
           transition: background-color 1s ease;
         }
 
+        :host .headerContainer{
+          flex-direction: row;
+          width: 85%;
+          min-width: 790px;
+          justify-content: center;
+          align-items: center;    
+        }
+
+        :host .headerContainer h2 {
+          color: var(--pw-text-light);
+          transition: color 1s ease;
+          font-family: 'Roboto', sans-serif;
+          margin: 0;
+          border-bottom: 2px solid var(--pw-text-light);
+          width: fit-content;
+          padding-right: 3px;
+        }
+
         :host .container {
           display: flex;
           flex-direction: column;
@@ -72,14 +90,17 @@ class ViewContact extends HTMLElement {
           display: flex;
         }
       </style> 
-  
+
+      <div class="headerContainer">
+        <h2>Contact</h2>
+      </div>
       <div class="container">
         <div class="inputTextBoxesContainer">
-          <pw-textfield class="nameInput" placeholder="Full Name" label="Full Name"></pw-textfield>
-          <pw-textfield class="emailInput" placeholder="Email" label="Email"></pw-textfield>
+          <pw-textfield class="nameInput" placeholder="Full Name" label="Full Name" title="Full Name"></pw-textfield>
+          <pw-textfield class="emailInput" placeholder="Email" label="Email" title="Email"></pw-textfield>
         </div>
-        <pw-textarea label="Message" placeholder="Type your message here..."></pw-textarea>
-        <pw-button content='Send Email'></pw-button>
+        <pw-textarea label="Message" placeholder="Type your message here..." title="Message"></pw-textarea>
+        <pw-button content='Send Email' title="Send Email"></pw-button>
       </div>
       `
 

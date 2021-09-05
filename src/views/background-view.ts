@@ -20,9 +20,27 @@ class ViewBackground extends HTMLElement {
         :host {
             display: flex;
             flex: 1 1 auto;
-            margin-top: 5%;
+            margin-top: 4%;
             align-items: center;
             flex-direction: column;
+        }
+
+        :host .headerContainer{
+          flex-direction: row;
+          width: 85%;
+          min-width: 790px;
+          justify-content: center;
+          align-items: center;    
+        }
+
+        :host .headerContainer h2 {
+          color: var(--pw-text-light);
+          transition: color 1s ease;
+          font-family: 'Roboto', sans-serif;
+          margin: 0;
+          border-bottom: 2px solid var(--pw-text-light);
+          width: fit-content;
+          padding-right: 3px;
         }
 
         :host .container {
@@ -60,9 +78,13 @@ class ViewBackground extends HTMLElement {
           flex-direction: column;
           align-items: center;
           width: 57%;
+          text-align: center;
         }
     </style> 
 
+    <div class="headerContainer">
+      <h2>Background</h2>
+    </div>
     <div class="container">
       <div class="background-circle-container">
         <pw-background-component src="./src/assets/pictures/pluxbox_new.png" style = '--background-color:#03A7F1;'></pw-background-component>

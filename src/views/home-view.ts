@@ -30,14 +30,15 @@ class ViewHome extends HTMLElement {
             width: 85%;
             min-width: 790px;
             justify-content: center;
-            margin-top: 5%;
+            margin-top: 10%;
+            margin-bottom: 5%;
         }
 
         :host img{
             width: 350px;
             height: var(--width);
             border-radius: 50%; 
-            border: 2px solid var(--pw-text-light);
+            box-shadow: 0px 0px 15px var(--pw-text-light);
         }
 
         :host .headers{

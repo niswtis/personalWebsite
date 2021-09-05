@@ -63,16 +63,20 @@ class ViewFooter extends HTMLElement {
             margin-left: 4%;
             transform: scale(1.5);
           }
+
+          .cvBtn{
+            margin-right: 7%;
+          }
         }
       </style> 
   
       <div class="container">
         <label>Copyright © 2021 Aristeidis Nisotakis</label>
         <div class="vl"></div>
-        <pw-icon name = "git2" onclick="window.open('https://github.com/niswtis','_newtab');"></pw-icon>
-        <pw-icon name = "linkedin" onclick="window.open('https://www.linkedin.com/in/aristides-nisotakis-8121901ab','_newtab');"></pw-icon>
-        <pw-icon name = "gmail" onclick="window.open('mailto:niswtis@gmail.com','_newtab');"></pw-icon>
-        <pw-icon name = "cv" class='cvBtn'></pw-icon>
+        <pw-icon name = "git2" onclick="window.open('https://github.com/niswtis','_newtab');" title="Github"></pw-icon>
+        <pw-icon name = "linkedin" onclick="window.open('https://www.linkedin.com/in/aristides-nisotakis-8121901ab','_newtab');" title="LinkedIn"></pw-icon>
+        <pw-icon name = "gmail" onclick="window.open('mailto:niswtis@gmail.com','_newtab');" title="Email"></pw-icon>
+        <pw-icon name = "cv" class='cvBtn' title="CV"></pw-icon>
       </div>
         
       `
