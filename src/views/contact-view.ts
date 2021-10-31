@@ -3,6 +3,8 @@ import '../components/pw-textfield'
 import '../components/pw-textarea'
 import HtmlWebpackPlugin = require('html-webpack-plugin')
 class ViewContact extends HTMLElement {
+    private shadow: ShadowRoot
+
     static get is () {
       return 'pw-view-contact'
     }
@@ -10,7 +12,7 @@ class ViewContact extends HTMLElement {
     constructor () {
       super()
       
-      const shadow = this.attachShadow({mode: 'open'});
+      this.shadow = this.attachShadow({mode: 'open'}) as ShadowRoot
     }
   
     connectedCallback () {
@@ -18,7 +20,7 @@ class ViewContact extends HTMLElement {
     }
   
     render () {
-      this.shadowRoot.innerHTML = `
+      this.shadow.innerHTML = `
       <style>
         :host {
           display: flex;
@@ -99,21 +101,29 @@ class ViewContact extends HTMLElement {
           <pw-textfield class="nameInput" placeholder="Full Name" label="Full Name" title="Full Name"></pw-textfield>
           <pw-textfield class="emailInput" placeholder="Email" label="Email" title="Email"></pw-textfield>
         </div>
-        <pw-textarea label="Message" placeholder="Type your message here..." title="Message"></pw-textarea>
+        <pw-textarea class="messageInput" label="Message" placeholder="Type your message here..." title="Message"></pw-textarea>
         <pw-button content='Send Email' title="Send Email"></pw-button>
       </div>
       `
 
-      const emailBtn = this.shadowRoot.querySelector('pw-button')
+      const emailBtn = this.shadow.querySelector('pw-button')
       emailBtn.addEventListener('click', this.sendEmail.bind(this))
+
+      const fullNameInput = this.shadow.querySelector('.nameInput') as HTMLElementTagNameMap['pw-textfield']
+      const emailInput = this.shadow.querySelector('.emailInput') as HTMLElementTagNameMap['pw-textfield']
+
+      fullNameInput.regexExp = /(^[A-Za-z]{1,20})([ ]{0,1})([A-Za-z]{1,20})?([ ]{0,1})?([A-Za-z]{1,20})?([ ]{0,1})?([A-Za-z]{1,20})/
+      emailInput.regexExp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     }
     
     sendEmail () {
-      const nameElement: HTMLInputElement = this.shadowRoot.querySelector('.nameInput')
-      const emailElement: HTMLInputElement = this.shadowRoot.querySelector('.emailInput')
-      const messageElement: HTMLInputElement = this.shadowRoot.querySelector('pw-textarea')
-      console.log(nameElement, emailElement, messageElement)
-      console.log(nameElement.value, emailElement.value, messageElement.value)
+      const nameElement: HTMLInputElement = this.shadow.querySelector('.nameInput')
+      const emailElement: HTMLInputElement = this.shadow.querySelector('.emailInput')
+      const messageElement: HTMLInputElement = this.shadow.querySelector('pw-textarea')
+      
+      if (nameElement.validity && emailElement.validity) {
+        
+      }
     } 
   }
 

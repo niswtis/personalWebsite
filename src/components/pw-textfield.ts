@@ -1,5 +1,13 @@
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'pw-textfield': textfield
+  }
+}
 class textfield extends HTMLElement {
   inputElement: HTMLInputElement
+  regexExpression: RegExp
+  inputValidation: boolean = true
 
   static get is (): string {
     return 'pw-textfield'
@@ -7,6 +15,26 @@ class textfield extends HTMLElement {
 
   get value (): string {
     return this.inputElement.value
+  }
+
+  get validity (): boolean {
+    return this.inputValidation
+  }
+
+  set regexExp (value: RegExp){
+    this.regexExpression = value
+    this.inputElement.addEventListener('keyup', () => {
+      const validated = value.test(this.inputElement.value)
+      this.inputValidation = false
+
+      if (!validated) {
+        this.inputElement.setAttribute('invalid', '')
+      }
+      else {
+        this.inputElement.removeAttribute('invalid')
+        this.inputValidation = true
+      }
+    })  
   }
 
   constructor () {
@@ -60,6 +88,12 @@ class textfield extends HTMLElement {
           font-family: 'Roboto', sans-serif;
           font-size: 20px;
           margin: 10px 5px 5px 15px;
+        }
+
+        input[invalid] {
+          outline: none;
+          border-radius: 2px;
+          border: 1px solid red!important;
         }
       </style>
 
