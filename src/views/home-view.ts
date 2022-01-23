@@ -88,7 +88,7 @@ class ViewHome extends HTMLElement {
             <div class="headerContainer">
                 <label id="header1"> Hi, I'm Aris </label>
                 <hr>
-                <label id="header2"> Junior Web Developer </label>
+                <label id="header2"> Web Developer </label>
             </div>
         </div>  
     </div>
