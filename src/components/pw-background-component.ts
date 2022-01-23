@@ -36,7 +36,6 @@ class backgroundComponent extends HTMLElement {
       </style>
       <img src="${this.getAttribute('src')}"></img>
     `
-    console.log(this.getAttribute('src'))
   }
 }
 

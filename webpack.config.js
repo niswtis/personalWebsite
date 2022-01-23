@@ -21,10 +21,14 @@ module.exports = {
     path: path.resolve(__dirname, './'),
   },
   devServer: {
-    contentBase: './',
+    static : {
+      directory : './'
+    },
     compress: true,
     hot: true,
     port: 8000,
-    publicPath: '/'
+    devMiddleware:{
+      publicPath: '/'
+   }
   },
 };

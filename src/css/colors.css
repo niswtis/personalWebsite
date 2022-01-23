@@ -8,6 +8,7 @@
     --pw-text-highlighted: #165EFF;
     --pw-separator: #11192A;
     --pw-contact-background: #F4F8FF;
+    --pw-text-error: #FF0033;
 }
 
 [data-theme = "light"]{
@@ -20,4 +21,5 @@
     --pw-text-highlighted: #004EFF;
     --pw-separator: #F4F8FF;
     --pw-contact-background: #F4F8FF;
+    --pw-text-error: #FF0033;
 }

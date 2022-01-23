@@ -7,7 +7,7 @@ declare global {
 class textfield extends HTMLElement {
   inputElement: HTMLInputElement
   regexExpression: RegExp
-  inputValidation: boolean = true
+  inputValidation: boolean = false
 
   static get is (): string {
     return 'pw-textfield'
@@ -23,18 +23,7 @@ class textfield extends HTMLElement {
 
   set regexExp (value: RegExp){
     this.regexExpression = value
-    this.inputElement.addEventListener('keyup', () => {
-      const validated = value.test(this.inputElement.value)
-      this.inputValidation = false
-
-      if (!validated) {
-        this.inputElement.setAttribute('invalid', '')
-      }
-      else {
-        this.inputElement.removeAttribute('invalid')
-        this.inputValidation = true
-      }
-    })  
+    this.inputElement.addEventListener('keyup', this.validate.bind(this))  
   }
 
   constructor () {
@@ -104,6 +93,19 @@ class textfield extends HTMLElement {
     `
 
     this.inputElement = this.shadowRoot.querySelector('.inputTextBox input')
+  }
+
+  validate() {
+    const validated = this.regexExpression.test(this.inputElement.value)
+    this.inputValidation = false
+
+    if (!validated) {
+      this.inputElement.setAttribute('invalid', '')
+    }
+    else {
+      this.inputElement.removeAttribute('invalid')
+      this.inputValidation = true
+    }
   }
 }
 

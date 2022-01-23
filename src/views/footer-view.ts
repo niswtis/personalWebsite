@@ -71,7 +71,7 @@ class ViewFooter extends HTMLElement {
       </style> 
   
       <div class="container">
-        <label>Copyright © 2021 Aristeidis Nisotakis</label>
+        <label>Copyright © 2021 Aristides Nisotakis</label>
         <div class="vl"></div>
         <pw-icon name = "git2" onclick="window.open('https://github.com/niswtis','_newtab');" title="Github"></pw-icon>
         <pw-icon name = "linkedin" onclick="window.open('https://www.linkedin.com/in/aristides-nisotakis-8121901ab','_newtab');" title="LinkedIn"></pw-icon>
@@ -85,11 +85,11 @@ class ViewFooter extends HTMLElement {
     }
 
     downloadCV(){
-      var link=document.createElement('a');
+      var link = document.createElement('a');
       const filePath = './src/assets/files/cv.pdf'
-      link.href = filePath;
-      link.download = filePath.substr(filePath.lastIndexOf('/') + 1);
-      link.click();
+      link.href = filePath
+      link.download = 'cv.pdf'
+      link.click()
     }
   }
   

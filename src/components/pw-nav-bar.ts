@@ -93,8 +93,6 @@ class navBar extends HTMLElement {
       body.setAttribute('data-theme','dark')
       this.setAttribute('name', 'sun')
     }
-
-    console.log(this)
   }
 }
 
