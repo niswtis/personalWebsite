@@ -19,7 +19,7 @@ class ViewHome extends HTMLElement {
         :host {
             display: flex;
             flex: 1 1 auto;
-            margin-top: 4vw;
+            margin-top: 1vw;
             align-items: center;
             flex-direction: column;
         }
@@ -35,10 +35,8 @@ class ViewHome extends HTMLElement {
         }
 
         :host img{
-            width: 350px;
+            width: 50%;
             height: var(--width);
-            border-radius: 50%; 
-            box-shadow: 0px 0px 15px var(--pw-text-light);
         }
 
         :host .headers{
@@ -62,6 +60,13 @@ class ViewHome extends HTMLElement {
             font-family: 'Roboto', sans-serif;
             transition: color 1s ease;
             font-size: 40px;
+            height: 55px;
+            position: relative;
+            overflow: hidden;
+            animation-name: header1;
+            animation-duration: 1.5s;
+            animation-iteration-count: 1;
+            animation-direction: normal;  
         }
 
         :host .headerContainer #header2{
@@ -69,21 +74,47 @@ class ViewHome extends HTMLElement {
             font-family: 'Roboto', sans-serif;
             transition: color 1s ease;
             font-size: 30px;
+            position: relative;
+            overflow: hidden;
+            line-height: 55px;
+            animation-name: header2;
+            animation-duration: 1.5s;
+            animation-iteration-count: 1;
+            animation-direction: normal;  
         }
 
         hr{
             background: var(--pw-text-light);
             transition: background 1s ease;
             border: 0;
-            width: 294px;
+            width: 70%;
+            min-width: 230px;
             height: 4px;
             border-radius: 4px;
-            margin-left: 0;
+            margin: 0;
+        }
+
+        @keyframes header1 {
+            from {
+                height: 0px; 
+            }
+            to {
+                height: 55px; 
+            }
+        }
+
+        @keyframes header2 {
+            from {
+                line-height: 0px;
+            }
+            to {
+                line-height: 55px; 
+            }
         }
     </style> 
 
     <div class="container">
-        <img src="./src/assets/pictures/profile1.jpg"></img>
+        <img src="./src/assets/pictures/profile1.png"></img>
         <div class="headers">
             <div class="headerContainer">
                 <label id="header1"> Hi, I'm Aris </label>

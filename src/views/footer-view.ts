@@ -71,7 +71,7 @@ class ViewFooter extends HTMLElement {
       </style> 
   
       <div class="container">
-        <label>Copyright © 2021 Aristides Nisotakis </label>
+        <label>Copyright © 2023 Aristides Nisotakis </label>
         <div class="vl"></div>
         <pw-icon name = "git2" onclick="window.open('https://github.com/niswtis','_newtab');" title="Github"></pw-icon>
         <pw-icon name = "linkedin" onclick="window.open('https://www.linkedin.com/in/aristides-nisotakis-8121901ab','_newtab');" title="LinkedIn"></pw-icon>

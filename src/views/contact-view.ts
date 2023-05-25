@@ -1,7 +1,7 @@
 import '../components/pw-button'
 import '../components/pw-textfield'
 import '../components/pw-textarea'
-import HtmlWebpackPlugin = require('html-webpack-plugin')
+
 class ViewContact extends HTMLElement {
     private shadow: ShadowRoot
 
@@ -25,7 +25,7 @@ class ViewContact extends HTMLElement {
         :host {
           display: flex;
           flex: 1 1 auto;
-          margin-top: 8%;
+          margin-top: 6%;
           align-items: center;
           flex-direction: column;
           background-color: var(--pw-background-dark);
@@ -43,9 +43,9 @@ class ViewContact extends HTMLElement {
         :host .headerContainer h2 {
           color: var(--pw-text-light);
           transition: color 1s ease;
-          font-family: 'Roboto', sans-serif;
+          font-family: 'Archivo', sans-serif;
+          font-size: 30px;
           margin: 0;
-          border-bottom: 2px solid var(--pw-text-light);
           width: fit-content;
           padding-right: 3px;
         }

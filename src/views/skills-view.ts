@@ -34,16 +34,16 @@ class ViewSkills extends HTMLElement {
             min-width: 790px;
             justify-content: center;
             align-items: center;    
-            margin-top: 4%; 
+            margin-top: 2%; 
           }
   
           :host .headerContainer h2 {
             color: var(--pw-text-light);
             transition: color 1s ease;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Archivo', sans-serif;
+            font-size: 30px;            
             transform: skewY(3deg);
             margin-bottom: 0;
-            border-bottom: 2px solid var(--pw-text-light);
             width: fit-content;
             padding-right: 3px;
           }

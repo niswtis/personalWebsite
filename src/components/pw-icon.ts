@@ -13,6 +13,10 @@ class icon extends HTMLElement {
     return ['name']
   }
 
+  public attributeChangedCallback (name: string, oldValue: string, newValue: string): void {
+    if (name === 'name') this.render()
+  }
+
   connectedCallback (): void {
     this.render()
   }

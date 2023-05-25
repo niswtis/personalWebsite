@@ -20,7 +20,7 @@ class navBar extends HTMLElement {
     <style>
       :host{
         display: flex;
-        height: 55px;
+        height: 45px;
         background-color: var(--pw-background-dark);
         transition: background-color 1s ease;
         position: fixed;
@@ -32,7 +32,7 @@ class navBar extends HTMLElement {
       div {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: center;
         flex: 1 1 auto;
         align-items: center;
       }
@@ -44,7 +44,7 @@ class navBar extends HTMLElement {
         color: var(--pw-text-light);
         font-family: 'Roboto', sans-serif;
         transition: color 0.5s ease;
-        font-size: 21px;
+        font-size: 18px;
         text-decoration: none;
       }
 
@@ -60,12 +60,12 @@ class navBar extends HTMLElement {
     </style>
 
     <div>
-      <pw-icon name = "sun" ></pw-icon>
       <a href="#home" name="home" title="Home">Home</a>
       <a href="#about" name="about" title="About">About</a>
       <a href="#background" name="background" title="Background">Background</a>
       <a href="#skills" name="skills" title="Skills">Skills</a>
       <a href="#contact" name="contact" title="Contact">Contact</a>
+      <pw-icon name = "sun" ></pw-icon>
     </div> 
   `
 
