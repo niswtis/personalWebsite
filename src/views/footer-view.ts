@@ -18,54 +18,67 @@ class ViewFooter extends HTMLElement {
     render () {
       this.shadowRoot.innerHTML = `
       <style>
-          :host {
-              display: flex;
-              flex: 1 1 auto;
-              margin-top: 4vw;
-              align-items: center;
-              flex-direction: column;
-              background-color: var(--pw-background-dark);
-              transition: background-color 1s ease;
-          }
-  
+        :host {
+          display: flex;
+          flex: 1 1 auto;
+          margin-top: 4vw;
+          align-items: center;
+          flex-direction: column;
+          background-color: var(--pw-background-dark);
+          transition: background-color 1s ease;
+        }
+
+        :host .container {
+          display: flex;
+          flex-direction: row;
+          min-width: 790px;
+          justify-content: center;
+          align-items: center;
+          margin-top: 3%;
+          width: 100%;
+          border-top: solid 4px var(--pw-separator);
+          transition: border-top 1s ease;
+        }
+        
+        :host .container label {
+          color: var(--pw-text-light);
+          transition: color 1s ease;
+          font-family: 'Roboto', sans-serif;
+          font-size: 21px;
+          margin-top: 3%;
+          margin-bottom: 3%;
+        }
+
+        :host .container .vl {
+          border-left: 6px solid var(--pw-separator);
+          transition: border-left 1s ease;
+          border-radius: 3px;
+          height: 60px;
+          margin-left: 4%;
+        }
+        
+        :host pw-icon {
+          width: 24px; 
+          height: 24px;
+          margin-left: 4%;
+          transform: scale(1.5);
+        }
+
+        .cvBtn {
+          margin-right: 7%;
+        }
+      
+        @media only screen and (max-width: 600px) {
           :host .container {
-              display: flex;
-              flex-direction: row;
-              min-width: 790px;
-              justify-content: center;
-              align-items: center;
-              margin-top: 3%;
-              width: 100%;
-              border-top: solid 4px var(--pw-separator);
-              transition: border-top 1s ease;
+            width: 100%;
           }
-          
+
           :host .container label {
-            color: var(--pw-text-light);
-            transition: color 1s ease;
-            font-family: 'Roboto', sans-serif;
-            font-size: 21px;
-            margin-top: 3%;
-            margin-bottom: 3%;
+            font-size: 15px;
           }
 
-          :host .container .vl {
-            border-left: 6px solid var(--pw-separator);
-            transition: border-left 1s ease;
-            border-radius: 3px;
-            height: 60px;
-            margin-left: 4%;
-          }
-          
-          :host pw-icon{
-            width: 24px; 
-            height: 24px;
-            margin-left: 4%;
-            transform: scale(1.5);
-          }
-
-          .cvBtn{
-            margin-right: 7%;
+          :host .cvBtn {
+            margin-right: 0;
           }
         }
       </style> 
