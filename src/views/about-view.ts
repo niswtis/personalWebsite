@@ -30,7 +30,6 @@ class ViewAbout extends HTMLElement {
         :host .headerContainer{
           flex-direction: row;
           width: 85%;
-          min-width: 790px;
           justify-content: center;
           align-items: center;    
           margin-top: 3%; 
@@ -51,7 +50,6 @@ class ViewAbout extends HTMLElement {
           display: flex;
           flex-direction: row;
           width: 85%;
-          min-width: 790px;
           justify-content: center;
           align-items: center;
           transform: skewY(-3deg);
@@ -69,6 +67,31 @@ class ViewAbout extends HTMLElement {
           font-size: 20px;
           margin-right: 10%;
           width: 50%;
+        }
+
+        @media only screen and (max-width: 600px) {
+          :host .headerContainer h2 {
+            font-size: 25px;            
+          }
+
+          :host .container {
+            flex-direction: column;
+            width: 100%;
+          }
+
+          :host .headerContainer{
+            width: 90%;
+          }
+
+          :host .aboutMeText {
+            margin: 0% 5% 0% 5%;
+            width: 90%;
+          }
+
+          :host img{
+            width: 50%;
+            margin-top: 5%;
+          }
         }
     </style> 
 

@@ -28,7 +28,6 @@ class ViewHome extends HTMLElement {
             display: flex;
             flex-direction: row;
             width: 85%;
-            min-width: 790px;
             justify-content: center;
             margin-top: 10%;
             margin-bottom: 5%;
@@ -109,6 +108,21 @@ class ViewHome extends HTMLElement {
             }
             to {
                 line-height: 55px; 
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            :host .container {
+              width: 100%;
+              margin-top: 15%;              
+            }
+    
+            :host img{
+                width: 45%;
+            }
+
+            :host .headerContainer{
+                margin-left: 8%;
             }
         }
     </style> 

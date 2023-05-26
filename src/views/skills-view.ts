@@ -31,7 +31,6 @@ class ViewSkills extends HTMLElement {
           :host .headerContainer{
             flex-direction: row;
             width: 85%;
-            min-width: 790px;
             justify-content: center;
             align-items: center;    
             margin-top: 2%; 
@@ -49,18 +48,31 @@ class ViewSkills extends HTMLElement {
           }
 
           :host .container {
-              display: grid;
-              grid-template-columns: repeat(4, 1fr);
-              gap: 45px;
-              grid-auto-rows: minmax(100px, auto);
-              flex-direction: row;
-              width: 85%;
-              min-width: 790px;
-              justify-content: center;
-              align-items: center;
-              transform: skewY(3deg);
-              margin-top: 2%;
-              margin-bottom: 10%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 45px;
+            grid-auto-rows: minmax(100px, auto);
+            flex-direction: row;
+            width: 85%;
+            justify-content: center;
+            align-items: center;
+            transform: skewY(3deg);
+            margin-top: 2%;
+            margin-bottom: 10%;
+          }
+
+          @media only screen and (max-width: 600px) {
+            :host .headerContainer h2 {
+              font-size: 25px;            
+            }
+
+            :host .headerContainer{
+              width: 90%;
+            }
+
+            :host .container {
+              width: 90%;
+            }
           }
       </style> 
 

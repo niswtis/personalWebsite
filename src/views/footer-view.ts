@@ -31,7 +31,6 @@ class ViewFooter extends HTMLElement {
         :host .container {
           display: flex;
           flex-direction: row;
-          min-width: 790px;
           justify-content: center;
           align-items: center;
           margin-top: 3%;
@@ -71,14 +70,20 @@ class ViewFooter extends HTMLElement {
         @media only screen and (max-width: 600px) {
           :host .container {
             width: 100%;
+            justify-content: unset;
           }
 
           :host .container label {
             font-size: 15px;
+            margin-left: 3%;
           }
 
           :host .cvBtn {
             margin-right: 0;
+          }
+
+          :host pw-icon {
+            margin-left: 6%;
           }
         }
       </style> 

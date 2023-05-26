@@ -35,7 +35,6 @@ class ViewContact extends HTMLElement {
         :host .headerContainer{
           flex-direction: row;
           width: 85%;
-          min-width: 790px;
           justify-content: center;
           align-items: center;    
         }
@@ -54,7 +53,6 @@ class ViewContact extends HTMLElement {
           display: flex;
           flex-direction: column;
           width: 70%;
-          min-width: 790px;
           justify-content: center;
           align-items: center;
           margin-top: 5%;
@@ -105,8 +103,27 @@ class ViewContact extends HTMLElement {
           opacity: 1;
         }
 
-        :host 
+        @media only screen and (max-width: 600px) {
+          :host .headerContainer {
+            width: 90%;          
+          }
 
+          :host .headerContainer h2 {
+            font-size: 25px;            
+          }
+
+          :host .container {
+            width: 90%;          
+          }
+
+          :host .emailInput{
+            margin-left: 10%;
+          } 
+
+          :host pw-button{
+            margin-top: 0;
+          }
+        }
       </style> 
 
       <div class="headerContainer">

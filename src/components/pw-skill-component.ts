@@ -51,6 +51,13 @@ class skillComponent extends HTMLElement {
         height: 130px;
         width: 130px;
       }
+
+      @media only screen and (max-width: 600px) {
+        :host pw-icon {
+          height: 70px;
+          width: 70px;
+        }
+      }
     </style>
 
     <pw-icon name = "${this.getAttribute('name')}" ></pw-icon>

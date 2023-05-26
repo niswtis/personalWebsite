@@ -57,6 +57,17 @@ class navBar extends HTMLElement {
         height: 20px;
         padding: 10px;
       }
+
+      @media only screen and (max-width: 600px) {
+        :host {
+          height: 60px;
+        }
+
+        div a {
+          font-size: 20px;
+          padding: 16px;    
+        }
+      }
     </style>
 
     <div>

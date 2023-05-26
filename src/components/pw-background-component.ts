@@ -33,6 +33,13 @@ class backgroundComponent extends HTMLElement {
         background-color: var(--background-color);
         transition: border 1s ease, background-color 1s ease;
       }
+
+      @media only screen and (max-width: 600px) {
+        :host img {
+          width: 200px;
+          height: 200px;
+        }
+      }
       </style>
       <img src="${this.getAttribute('src')}"></img>
     `

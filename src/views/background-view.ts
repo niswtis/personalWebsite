@@ -28,7 +28,6 @@ class ViewBackground extends HTMLElement {
         :host .headerContainer{
           flex-direction: row;
           width: 85%;
-          min-width: 790px;
           justify-content: center;
           align-items: center;    
         }
@@ -47,9 +46,7 @@ class ViewBackground extends HTMLElement {
             display: flex;
             flex-direction: column;
             width: 85%;
-            min-width: 790px;
             justify-content: center;
-           
         }
 
         :host .background-circle-container {
@@ -79,6 +76,20 @@ class ViewBackground extends HTMLElement {
           align-items: center;
           width: 57%;
           text-align: center;
+        }
+
+        @media only screen and (max-width: 600px) {
+          :host .headerContainer h2 {
+            font-size: 25px;            
+          }
+
+          :host .headerContainer {
+            width: 90%;
+          }
+
+          :host .background-circle-container div label {
+            font-size: 20px;
+          }
         }
     </style> 
 
