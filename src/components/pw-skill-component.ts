@@ -57,6 +57,10 @@ class skillComponent extends HTMLElement {
           height: 70px;
           width: 70px;
         }
+
+        :host label {
+          font-size: 18px;
+        }
       }
     </style>
 
