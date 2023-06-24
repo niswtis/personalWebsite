@@ -1,21 +1,21 @@
-import '../components/pw-skill-component'
+import "../components/pw-skill-component";
 class ViewSkills extends HTMLElement {
-    static get is () {
-      return 'pw-view-skills'
-    }
-  
-    constructor () {
-      super()
-      
-      const shadow = this.attachShadow({mode: 'open'});
-    }
-  
-    connectedCallback () {
-      this.render()
-    }
-  
-    render () {
-      this.shadowRoot.innerHTML = `
+  static get is() {
+    return "pw-view-skills";
+  }
+
+  constructor() {
+    super();
+
+    const shadow = this.attachShadow({ mode: "open" });
+  }
+
+  connectedCallback() {
+    this.render();
+  }
+
+  render() {
+    this.shadowRoot.innerHTML = `
       <style>
           :host {
               display: flex;
@@ -83,16 +83,16 @@ class ViewSkills extends HTMLElement {
         <pw-skill-component name="html" label="HTML 5"></pw-skill-component>
         <pw-skill-component name="css" label="CSS 3"></pw-skill-component>
         <pw-skill-component name="typescript" label="Typescript"></pw-skill-component>
+        <pw-skill-component name="react" label="React"></pw-skill-component>
         <pw-skill-component name="nodeJs" label="Node JS"></pw-skill-component>
         <pw-skill-component name="graphQl" label="GraphQL"></pw-skill-component>
         <pw-skill-component name="apollo" label="Apollo"></pw-skill-component>
         <pw-skill-component name="git" label="Git"></pw-skill-component>
-        <pw-skill-component name="figma" label="Figma"></pw-skill-component>
       </div>
         
-      `
-    }
+      `;
   }
-  
-  customElements.define(ViewSkills.is, ViewSkills)
-  export default ViewSkills.is
+}
+
+customElements.define(ViewSkills.is, ViewSkills);
+export default ViewSkills.is;
