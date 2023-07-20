@@ -1,22 +1,22 @@
-import '../components/pw-icon'
+import "../components/pw-icon";
 
 class ViewFooter extends HTMLElement {
-    static get is () {
-      return 'pw-view-footer'
-    }
-  
-    constructor () {
-      super()
-      
-      const shadow = this.attachShadow({mode: 'open'});
-    }
-  
-    connectedCallback () {
-      this.render()
-    }
-  
-    render () {
-      this.shadowRoot.innerHTML = `
+  static get is() {
+    return "pw-view-footer";
+  }
+
+  constructor() {
+    super();
+
+    const shadow = this.attachShadow({ mode: "open" });
+  }
+
+  connectedCallback() {
+    this.render();
+  }
+
+  render() {
+    this.shadowRoot.innerHTML = `
       <style>
         :host {
           display: flex;
@@ -97,19 +97,19 @@ class ViewFooter extends HTMLElement {
         <pw-icon name = "cv" class='cvBtn' title="CV"></pw-icon>
       </div>
         
-      `
-      const cvBtn = this.shadowRoot.querySelector('.cvBtn')
-      cvBtn.addEventListener('click',this.downloadCV)
-    }
-
-    downloadCV(){
-      var link = document.createElement('a');
-      const filePath = './src/assets/files/cv.pdf'
-      link.href = filePath
-      link.download = 'cv.pdf'
-      link.click()
-    }
+      `;
+    const cvBtn = this.shadowRoot.querySelector(".cvBtn");
+    cvBtn.addEventListener("click", this.downloadCV);
   }
-  
-  customElements.define(ViewFooter.is, ViewFooter)
-  export default ViewFooter.is
+
+  downloadCV() {
+    var link = document.createElement("a");
+    const filePath = "./src/assets/files/resume.pdf";
+    link.href = filePath;
+    link.download = "resume.pdf";
+    link.click();
+  }
+}
+
+customElements.define(ViewFooter.is, ViewFooter);
+export default ViewFooter.is;

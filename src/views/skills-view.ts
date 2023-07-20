@@ -86,7 +86,7 @@ class ViewSkills extends HTMLElement {
         <pw-skill-component name="react" label="React"></pw-skill-component>
         <pw-skill-component name="nodeJs" label="Node JS"></pw-skill-component>
         <pw-skill-component name="graphQl" label="GraphQL"></pw-skill-component>
-        <pw-skill-component name="apollo" label="Apollo"></pw-skill-component>
+        <pw-skill-component name="mongodb" label="MongoDB"></pw-skill-component>
         <pw-skill-component name="git" label="Git"></pw-skill-component>
       </div>
         
