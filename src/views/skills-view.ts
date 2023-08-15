@@ -1,4 +1,4 @@
-import "../components/pw-skill-component";
+import "../components/pw-skill";
 class ViewSkills extends HTMLElement {
   static get is() {
     return "pw-view-skills";
@@ -59,6 +59,7 @@ class ViewSkills extends HTMLElement {
             transform: skewY(3deg);
             margin-top: 2%;
             margin-bottom: 10%;
+            height: 420px;
           }
 
           @media only screen and (max-width: 600px) {

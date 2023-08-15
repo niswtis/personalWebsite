@@ -1,29 +1,32 @@
-import './pw-icon'
+import "./pw-icon";
 class skillComponent extends HTMLElement {
-  static get is () {
-    return 'pw-skill-component'
+  static get is() {
+    return "pw-skill-component";
   }
 
-  constructor () {
-    super()
-    
-    const shadow = this.attachShadow({mode: 'open'})
-    
+  constructor() {
+    super();
+
+    const shadow = this.attachShadow({ mode: "open" });
   }
 
   static get observedAttributes() {
-    return ['name', 'label'];
+    return ["name", "label"];
   }
 
-  attributeChangedCallback (attrName: string, oldValue:string, newValue:string) {
-    this.render()
+  attributeChangedCallback(
+    attrName: string,
+    oldValue: string,
+    newValue: string
+  ) {
+    this.render();
   }
 
-  connectedCallback () {
-    this.render()
+  connectedCallback() {
+    this.render();
   }
 
-  render () {
+  render() {
     this.shadowRoot.innerHTML = `
     <style>
       :host {
@@ -52,10 +55,15 @@ class skillComponent extends HTMLElement {
         width: 130px;
       }
 
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 700px) {
         :host pw-icon {
           height: 70px;
           width: 70px;
+        }
+
+        :host pw-icon:hover {
+          height: 90px;
+          width: 90px;
         }
 
         :host label {
@@ -64,13 +72,12 @@ class skillComponent extends HTMLElement {
       }
     </style>
 
-    <pw-icon name = "${this.getAttribute('name')}" ></pw-icon>
-    <label>${this.getAttribute('label')}<label>
-    `
-    this.title = this.getAttribute('label')
+    <pw-icon name = "${this.getAttribute("name")}" ></pw-icon>
+    <label>${this.getAttribute("label")}<label>
+    `;
+    this.title = this.getAttribute("label");
   }
 }
 
-
-customElements.define(skillComponent.is, skillComponent)
-export default skillComponent.is
+customElements.define(skillComponent.is, skillComponent);
+export default skillComponent.is;
