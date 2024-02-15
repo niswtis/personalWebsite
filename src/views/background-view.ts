@@ -98,6 +98,13 @@ class ViewBackground extends HTMLElement {
     </div>
     <div class="container">
       <div class="background-circle-container">
+        <pw-background-component src="./src/assets/pictures/pluxbox_new.png" style = '--background-color:#03A7F1;'></pw-background-component>
+        <div>
+          <label> Full Stack Web Developer at Pluxbox </label>
+          <label class="darkerLabel"> (September 2023 - Now) </label>
+        </div>
+      </div>
+      <div class="background-circle-container">
         <!--
           credits
           <a href="https://www.freepik.com/free-vector/man-hazardous-situation_894378.htm#query=carrer%20break&position=7&from_view=search&track=ais">Image by dooder</a> on Freepik
@@ -105,7 +112,7 @@ class ViewBackground extends HTMLElement {
         <pw-background-component src="./src/assets/pictures/career_break.jpg" style = '--background-color:#03A7F1;'></pw-background-component>
         <div>
           <label> Career Break </label>
-          <label class="darkerLabel"> (September 2022 - Now) </label>
+          <label class="darkerLabel"> (September 2022 - September 2023) </label>
         </div>
       </div>
       <div class="background-circle-container">
